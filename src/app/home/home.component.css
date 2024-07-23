@@ -1,0 +1,119 @@
+.MainContainer{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    background-color: #ebecf0;
+    justify-content: space-between;
+  }
+  .LeftDiv{
+      width: 69%;
+      height: auto;
+  }
+  .RightDiv{
+      width: 30%;
+      height: auto;
+  }
+  .section1{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+  }
+  .section1>div{
+      width: 49%;
+      height: auto;
+      min-height: 30px;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      padding: 20px;
+  }
+  .logoandHii{
+      display: flex;
+      justify-content: space-between;
+  }
+  .logo{
+      width: 250px;
+      margin-top: -40px;
+  }
+  .title{
+      font-size: 36px;
+      color: #f7942b;
+  }
+  .logoandHii>div:nth-child(1){
+      margin-top: 20px;
+  }
+  .inputWithLabel{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .inputWithLabel>label{
+      font-size: 16px;
+  }
+  .inputWithLabel>input{
+      width: 100%;
+      background-color: #ebecf0;
+      border: none;
+      outline: none;
+      text-align: center;
+      border-radius:10px;
+      height: 40px;
+      margin-top: 5px;
+  }
+  .Submit1{
+      margin-top: 30px;
+      background: rgb(254,201,46);
+      background: linear-gradient(90deg, rgba(254,201,46,1) 0%, rgba(247,148,43,1) 44%);
+      width: 100%;
+      border-radius: 20px;
+      font-size: 20px;
+      color: #FFFFFF;
+      height: 40px;
+      border: none;
+      outline: none;
+  }
+  .Submit2{
+    margin-top: 30px;
+    background: rgb(254,201,46);
+    background: linear-gradient(90deg, rgba(254,201,46,1) 0%, rgba(247,148,43,1) 44%);
+    width: 100px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #FFFFFF;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-top: 80px;
+  }
+  .section2{
+      width: 100%;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      margin-top: 20px;
+      display: flex;
+  }
+  
+  .section2>div{
+      width: 50%;
+      padding: 20px;
+  }
+  .section2>div:nth-child(2){
+      border-left: 1px solid #ebecf0;
+  }
+  .section3{
+      width: 100%;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      height: auto;
+      padding: 20px;
+  }
+  .leftSideSub{
+      width:  30%;
+      height: auto;
+      display: flex;
+      align-items: center;
+  }
+  .rightSideSub{
+      width:  60%;
+      height: auto;
+  }
