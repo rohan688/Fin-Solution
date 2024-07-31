@@ -38,53 +38,47 @@
           <input type="number" [(ngModel)]="HomeLoans"/>
         </div>
         <div class="inputWithLabel">
-          <label>Others (EMI) :</label><br>
+          <label>Others Loans :</label><br>
           <input type="number" [(ngModel)]="OtherEMI"/>
         </div>
         <button (click)="Submit2()" class="Submit1">Submit</button>
        </div>
       </div>
       <div class="section2">
-        <div style="display: flex;justify-content: space-between;">
-          <div class="leftSideSub">
-            <div style="margin-top: 0px;" class="inputWithLabel">
-              <label>First Income Age :</label><br>
-              <input [(ngModel)]="FirstIncomeAge" disabled />
-            </div>  
+        <div>
+          <div style="margin-top: 0px;" class="inputWithLabel">
+            <label>First Income Age :</label><br>
+            <input [(ngModel)]="FirstIncomeAge" disabled />
           </div>
-          <div class="rightSideSub">
-            <div style="margin-top: 0px;" class="inputWithLabel">
-              <label>Monthly :</label><br>
-              <input [(ngModel)]="MonthlyFirst"/>
-            </div>  
-            <div style="margin-top: 30px;" class="inputWithLabel">
-              <label>Annullay :</label><br>
-              <input [(ngModel)]="AnnuallyFirst" disabled/>
-            </div>  
+          <div style="margin-top: 10px;" class="inputWithLabel">
+            <label>Monthly Salary:</label><br>
+            <input (change)="change1()" [(ngModel)]="MonthlyFirst"/>
+          </div>
+          <div style="margin-top: 10px;"  class="inputWithLabel">
+            <label>Annually Salary:</label><br>
+            <input [(ngModel)]="AnnuallyFirst" disabled/>
           </div>
         </div>
         
   
   
-        <div style="display: flex;justify-content: space-between;">
-          <div class="leftSideSub">
-            <div style="margin-top: 0px;" class="inputWithLabel">
-              <label>Present Income Age :</label><br>
-              <input [(ngModel)]="CurrentIndomeAge" disable/>
-            </div>  
+        <div>
+          <div style="margin-top: 0px;" class="inputWithLabel">
+            <label >Present Income Age :</label><br>
+            <input [(ngModel)]="CurrentIndomeAge" disable/>
           </div>
-          <div class="rightSideSub">
-            <div style="margin-top: 0px;" class="inputWithLabel">
-              <label>Monthly :</label><br>
-              <input  [(ngModel)]="MonthlyCurrent" />
-            </div>  
-            <div style="margin-top: 30px;" class="inputWithLabel">
-              <label>Annullay :</label><br>
-              <input [(ngModel)]="AnnuallyCurrent" disabled/>
-            </div>  
+          <div style="margin-top: 10px;" class="inputWithLabel">
+            <label>Monthly Salary:</label><br>
+            <input   (change)="change2()" [(ngModel)]="MonthlyCurrent" />
+          </div>
+          <div style="margin-top: 10px;"  class="inputWithLabel">
+            <label>Annually Salary:</label><br>
+            <input [(ngModel)]="AnnuallyCurrent" disabled/>
           </div>
         </div>
-        <button (click)="Submit3()" class="Submit2">Submit</button>
+        <div>
+          <button (click)="Submit3()" class="Submit2">Submit</button>
+        </div>
       </div>
     </div>
   
@@ -107,16 +101,27 @@
       </div>
       <div class="inputWithLabel">
         <label>Growth of salary :</label><br>
-        <input/>
+        <input [(ngModel)]="GrowwthOfSalary" disabled/>
       </div>
       <div class="inputWithLabel">
         <label>Total Income Earned till date :</label><br>
-        <input/>
+        <input [(ngModel)]="TotalIncomeErned" disabled/>
       </div>
       <div class="inputWithLabel">
         <label>Percentage Contributed for Saving Per Month :</label><br>
-        <input/>
+        <input [(ngModel)]="PErcentageContributed" disabled/>
       </div>
      </div>
-    </div>
+    </div> 
+</div>
+<div class="overlay" *ngIf="Popup">
+  <div class="popMain"> 
+    <div class="title" style="text-align: center;width: 100%;font-weight: 500;">THANK YOU</div>
+    <div class="title" style="text-align: center;width: 100%;font-size: 18px;">for providing the details</div>
+    <div class="title" style="text-align: center;width: 100%;font-size: 16px; color: black; margin-top: 50px;font-weight: 600;">To improve your score, Feel free to reach us.</div>
+    <img src="../../assets/Asset Elixir-LOGO.png" width="200px">
+    <div class="title" style="text-align: center;width: 100%;font-size: 18px; color: black;font-weight: 600;margin-top: -50px;">+91 7021089870</div>
+    <div class="title" style="text-align: center;width: 100%;font-size: 18px; color: black;font-weight: 600;"> assetelixir&#64;gmail.com </div>
+    <button (click)="Submit8()" class="Submit1">Go to Result</button>
   </div>
+</div>

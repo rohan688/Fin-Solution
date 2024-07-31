@@ -5,6 +5,7 @@
     display: flex;
     background-color: #ebecf0;
     justify-content: space-between;
+    overflow: scroll;
   }
   .LeftDiv{
       width: 69%;
@@ -35,6 +36,7 @@
   .logo{
       width: 250px;
       margin-top: -40px;
+      margin-right: -50px;
   }
   .title{
       font-size: 36px;
@@ -73,17 +75,15 @@
       outline: none;
   }
   .Submit2{
-    margin-top: 30px;
     background: rgb(254,201,46);
     background: linear-gradient(90deg, rgba(254,201,46,1) 0%, rgba(247,148,43,1) 44%);
-    width: 100px;
+    width: 100%;
     border-radius: 20px;
     font-size: 20px;
     color: #FFFFFF;
     height: 40px;
     border: none;
     outline: none;
-    margin-top: 80px;
   }
   .section2{
       width: 100%;
@@ -93,12 +93,21 @@
       display: flex;
   }
   
-  .section2>div{
-      width: 50%;
+  .section2>div:nth-child(1){
+      width: 40%;
       padding: 20px;
   }
   .section2>div:nth-child(2){
       border-left: 1px solid #ebecf0;
+      width: 40%;
+      padding: 20px;
+  }
+  .section2>div:nth-child(3){
+    border-left: 1px solid #ebecf0;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
   }
   .section3{
       width: 100%;
@@ -108,12 +117,74 @@
       padding: 20px;
   }
   .leftSideSub{
-      width:  30%;
+      width:  120px;
       height: auto;
       display: flex;
       align-items: center;
   }
   .rightSideSub{
-      width:  60%;
+      width:  calc(100% - 130px);
       height: auto;
+  }
+  .overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: flex; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  .popMain{
+    height: auto;
+    width: 400px;
+    background-color: #FFF;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #f7942b;
+  }
+  @media only screen and (max-width: 600px) {
+    .MainContainer{
+        display: block;
+    }
+    .LeftDiv{
+        width: 100%;
+        height: auto;
+    }
+    .RightDiv{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+    .section1{
+        display: block;
+    }
+    .section1>div{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .section2{
+        display: block;
+    }
+    .section2>div:nth-child(1){
+        width: 100%;
+        padding: 20px;
+    }
+    .section2>div:nth-child(2){
+        border-left: none;
+        width: 100%;
+        padding: 20px;
+    }
+    .section2>div:nth-child(3){
+        border-left: none;
+        width: 100%;
+        padding: 20px;
+    }
   }
