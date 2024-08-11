@@ -30,6 +30,10 @@ Submit1(){
     alert('Please Enter Your Mobile Number!');
     return;
   }
+  if(this,this.UserObj.Number.length != 10){
+    alert("Please Enter 10 Digit Valid Mobile Number!");
+    return;
+  }
   localStorage.setItem('user',JSON.stringify(this.UserObj))
   this.Router.navigate(['/home']);
 }

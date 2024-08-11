@@ -150,6 +150,12 @@
     padding: 20px;
     border: 2px solid #f7942b;
   }
+  .FooterPart{
+    background: rgb(254,201,46);
+    background: linear-gradient(90deg, rgba(254,201,46,1) 0%, rgba(247,148,43,1) 44%);
+    width: 100%;
+    height: 40px;
+  }
   @media only screen and (max-width: 600px) {
     .MainContainer{
         display: block;
