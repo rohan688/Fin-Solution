@@ -35,6 +35,9 @@ export class HomeComponent {
   PErcentageContributed:any='';
   Popup:boolean=false;
   User:any;
+  ButtonActive1:boolean=false;
+  ButtonActive2:boolean=true;
+  ButtonActive3:boolean=true;
   constructor(private Router : Router){
 
   }
@@ -48,20 +51,36 @@ export class HomeComponent {
 
   }
   Submit1(){
+    if(!this.FirstIncomeAge){
+      alert('Please Enter First Earning Age!');
+      return;
+    }
+    if(!this.CurrentIndomeAge){
+      alert('Please Enter Current Earning Age!');
+      return;
+    }
     if(this.FirstIncomeAge>this.CurrentIndomeAge){
       alert('Please Enter Valid Age!');
       return;
     }
     this.TotalMonths=(this.CurrentIndomeAge - this.FirstIncomeAge)*12;
-    console.log(this.TotalMonths)
+    this.ButtonActive2=false;
   }
   Submit2(){
-    console.log('hit')
     this.NetAssetAfterLoans=(this.SavingMFPF+this.RealEstate) - (this.HomeLoans + this.OtherEMI);
     this.MonthlyContri=Math.round(this.NetAssetAfterLoans / this.TotalMonths);
+    this.ButtonActive3=false;
   }
 
   Submit3(){
+    if(!this.MonthlyFirst){
+      alert('Please Enter First Monthly Income!');
+      return;
+    }
+    if(!this.MonthlyCurrent){
+      alert('Please Enter Current Monthly Income!');
+      return;
+    }
     let sum1=this.MonthlyCurrent /  this.MonthlyFirst;
     let sum2= 1/(this.CurrentIndomeAge - this.FirstIncomeAge);
     console.log(sum1,sum2)

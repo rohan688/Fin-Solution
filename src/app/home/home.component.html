@@ -20,7 +20,7 @@
           <label>What is your current earning age :</label><br>
           <input type="number" [(ngModel)]="CurrentIndomeAge"/>
         </div>
-        <button (click)="Submit1()" class="Submit1">Submit</button>
+        <button (click)="Submit1()" [disabled]="ButtonActive1" class="Submit1">Submit</button>
        </div>
        
        
@@ -41,7 +41,7 @@
           <label>Others Loans :</label><br>
           <input type="number" [(ngModel)]="OtherEMI"/>
         </div>
-        <button (click)="Submit2()" class="Submit1">Submit</button>
+        <button (click)="Submit2()" [disabled]="ButtonActive2" class="Submit1">Submit</button>
        </div>
       </div>
       <div class="section2">
