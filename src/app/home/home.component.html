@@ -51,11 +51,11 @@
             <input [(ngModel)]="FirstIncomeAge" disabled />
           </div>
           <div style="margin-top: 10px;" class="inputWithLabel">
-            <label>Monthly Salary:</label><br>
+            <label>First Monthly Salary:</label><br>
             <input (change)="change1()" [(ngModel)]="MonthlyFirst"/>
           </div>
           <div style="margin-top: 10px;"  class="inputWithLabel">
-            <label>Annually Salary:</label><br>
+            <label>First Annually Salary:</label><br>
             <input [(ngModel)]="AnnuallyFirst" disabled/>
           </div>
         </div>
@@ -65,14 +65,14 @@
         <div>
           <div style="margin-top: 0px;" class="inputWithLabel">
             <label >Present Income Age :</label><br>
-            <input [(ngModel)]="CurrentIndomeAge" disable/>
+            <input [(ngModel)]="CurrentIndomeAge" disabled/>
           </div>
           <div style="margin-top: 10px;" class="inputWithLabel">
-            <label>Monthly Salary:</label><br>
+            <label>Current Monthly Salary:</label><br>
             <input   (change)="change2()" [(ngModel)]="MonthlyCurrent" />
           </div>
           <div style="margin-top: 10px;"  class="inputWithLabel">
-            <label>Annually Salary:</label><br>
+            <label>Current Annually Salary:</label><br>
             <input [(ngModel)]="AnnuallyCurrent" disabled/>
           </div>
         </div>
@@ -93,7 +93,7 @@
       </div>
       <div class="inputWithLabel" style="margin-top: 40px;">
         <label>Monthly contributionfrom first age :</label><br>
-        <input [(ngModel)]="MonthlyContri"/>
+        <input [(ngModel)]="MonthlyContri" disabled/>
       </div>
       <div class="inputWithLabel" style="margin-top: 40px;">
         <label>Net asset after loans :</label><br>
